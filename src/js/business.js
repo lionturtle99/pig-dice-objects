@@ -1,8 +1,8 @@
 export function Game(runningScore) {
-  // this.runningScore = runningScore;
-  // this.currentId = 0;
-  // this.players = {};
-  // this.playerTurnBoolean = 1;
+  this.runningScore = runningScore;
+  this.currentId = 0;
+  this.players = {};
+  this.playerTurnBoolean = 1;
 }
 
 export function die() {

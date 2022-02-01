@@ -2,16 +2,16 @@ export function Game(runningScore) {
   this.runningScore = runningScore;
   this.currentId = 0;
   this.players = {};
-  this.playerTurnBoolean = 1;
+  this.playerTurnBoolean = true;
 }
 
 Game.prototype.playerTurn = function(currentRoll) {
   if (currentRoll === 1) {
-    return this.runningScore = 0;
+    this.runningScore = 0;
     // this.endTurn();
   }
   else {
-    return this.runningScore += currentRoll;
+    this.runningScore += currentRoll;
   }
 };
 
@@ -57,8 +57,8 @@ Game.prototype.winner = function() {
 };
 
 export function Player(score, name) {
-  this.score = score;
-  this.name = name;
+  // this.score = score;
+  // this.name = name;
 }
 
 export function getPlayerTurn() {

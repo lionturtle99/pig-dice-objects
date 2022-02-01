@@ -6,13 +6,13 @@ export function Game(runningScore) {
 }
 
 Game.prototype.playerTurn = function(currentRoll) {
-  // if (currentRoll === 1) {
-  //   return this.runningScore = 0;
-  //   // this.endTurn();
-  // }
-  // else {
-  //   return this.runningScore += currentRoll;
-  // }
+  if (currentRoll === 1) {
+    return this.runningScore = 0;
+    // this.endTurn();
+  }
+  else {
+    return this.runningScore += currentRoll;
+  }
 };
 
 Game.prototype.addPlayer = function(player) {

@@ -5,18 +5,14 @@ export function Game(runningScore) {
   this.playerTurnBoolean = 1;
 }
 
-export function die() {
-  return Math.floor((Math.random()*6)+1);
-}
-
 Game.prototype.playerTurn = function(currentRoll) {
-  if (currentRoll === 1) {
-    this.runningScore = 0;
-    this.endTurn();
-  }
-  else {
-    this.runningScore += currentRoll;
-  }
+  // if (currentRoll === 1) {
+  //   return this.runningScore = 0;
+  //   // this.endTurn();
+  // }
+  // else {
+  //   return this.runningScore += currentRoll;
+  // }
 };
 
 Game.prototype.addPlayer = function(player) {
@@ -72,4 +68,8 @@ export function getPlayerTurn() {
   } else {
     return "player2";
   }
+}
+
+export function die() {
+  return Math.floor((Math.random()*6)+1);
 }

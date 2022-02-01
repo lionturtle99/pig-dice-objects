@@ -6,6 +6,7 @@ describe ('Game', () => {
   let player1;
   beforeEach( () => {
     newGame = new Game(0);
+    player1 = new Player(0, "Jimbob");
   });
   test('it should create a game object', () => {
     expect(newGame.runningScore).toEqual(0);
@@ -15,16 +16,16 @@ describe ('Game', () => {
   });
   
   test("it should create a new player object", () => {
-    player1 = new Player(0, "Jimbob");
     expect(player1.score).toEqual(0);
     expect(player1.name).toEqual("Jimbob");
   });
   test("it should assign an ID to player", () => {
     expect(newGame.assignId()).toEqual(1);
-
   });
-
-
+  test("It should assign an id to a player", () => {
+    newGame.addPlayer(player1);
+    expect(newGame.players[1 /*this is the players id*/].id/*this is also the players id*/).toEqual(999);
+  }); 
 
   test("it should turn runningScore to 0", () => {
     currentRoll = 1;

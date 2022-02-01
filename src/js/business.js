@@ -57,8 +57,8 @@ Game.prototype.winner = function() {
 };
 
 export function Player(score, name) {
-  // this.score = score;
-  // this.name = name;
+  this.score = score;
+  this.name = name;
 }
 
 export function getPlayerTurn() {

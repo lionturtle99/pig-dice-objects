@@ -19,6 +19,12 @@ describe ('Game', () => {
     expect(player1.score).toEqual(0);
     expect(player1.name).toEqual("Jimbob");
   });
+  test("it should assign an ID to player", () => {
+    expect(newGame.assignId()).toEqual(1);
+
+  });
+
+
 
   test("it should turn runningScore to 0", () => {
     currentRoll = 1;
@@ -53,17 +59,4 @@ describe ('Game', () => {
 //   }
 // };
 
-// Game.prototype.addPlayer = function(player) {
-//   player.id = this.assignId();
-//   this.players[player.id] = player;
-// };
 
-// Game.prototype.assignId = function() {
-//   this.currentId += 1;
-//   return this.currentId;
-// };
-
-// export function Player(score, name) {
-//   this.score = score;
-//   this.name = name;
-// }

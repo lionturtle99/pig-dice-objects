@@ -24,7 +24,7 @@ describe ('Game', () => {
   });
   test("It should assign an id to a player", () => {
     newGame.addPlayer(player1);
-    expect(newGame.players[1 /*this is the players id*/].id/*this is also the players id*/).toEqual(999);
+    expect(newGame.players[1 /*this is the players id*/].id/*this is also the players id*/).toEqual(1);
   }); 
 
   test("it should turn runningScore to 0", () => {

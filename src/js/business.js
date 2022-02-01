@@ -21,8 +21,8 @@ Game.prototype.addPlayer = function(player) {
 };
 
 Game.prototype.assignId = function() {
-  // this.currentId += 1;
-  // return this.currentId;
+  this.currentId += 1;
+  return this.currentId;
 };
 
 Game.prototype.endTurn = function() {

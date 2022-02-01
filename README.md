@@ -18,7 +18,7 @@ function die() {
   Math.floor((Math.random()*6)+1);
 }
   
-function playerTurn() {
+Game.prototype.playerTurn = function() {
   if (currentRoll === 1) {
     currentRoll = 0;
     endTurn();
@@ -28,7 +28,7 @@ function playerTurn() {
   }
 }
 
-endTurn() {
+Game.prototype.endTurn = function() {
   if (this.playerTurnBoolean === true) {
     this.players.player1.score += this.runningScore;
     this.playerTurnBoolean = !playerTurnBoolean;
@@ -42,11 +42,19 @@ endTurn() {
   }
 }
 
-function winner(gameBoard) {
+function CheckTurn() {
+  if (this.playerTurnBoolean === true) {
+    return "Player 1 turn"
+  } else {
+    return "player 2 turn"
+  }
+}
+
+Game.prototype.winner = function(gameBoard) {
   this needs loop through the players score to see if theres a winner every time the end turn function is called;
   object.keys(gameBoard.players).forEach(function(key) {
     if (gameBoard.players[key].score <= 100) {
-      alert ("player " + gameBoard.players[key].id + "wins with a score of " + gameBoard.players[key].score + " !!");
+      alert("player " + gameBoard.players[key].id + "wins with a score of " + gameBoard.players[key].score + " !!");
     }
   })
 }
@@ -96,7 +104,7 @@ Test: It should add players to the game object
 Code: gameBoard.addPlayer(player1);
 Expected Output: gameBoard.players{player1:, player2:}
 
-Test: It should end a players turn if they roll a 1 or add their roll to that players running score if they anything else
+Test: It should end a players turn if they roll a 1 or add their roll to that players running score if they roll anything other than a 1
 Code: 
   Game.prototype.playerTurn() {
     if (this.currentRoll === 1) {

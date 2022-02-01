@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 10px;
+}
+.rules {
+  padding: 10px;
+  border: 5px;
+}
+.game {
+  padding: 10px;
+  margin: 2em;
+}
+h1 {
+  text-align: center;
+  margin: 1em;
+}

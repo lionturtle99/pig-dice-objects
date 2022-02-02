@@ -26,17 +26,17 @@ Game.prototype.assignId = function() {
 };
 
 Game.prototype.endTurn = function() {
-  if (this.playerTurnBoolean === true) {
-    this.players[1].score += this.runningScore;
-    this.playerTurnBoolean = false;
-    this.winner();
-    this.runningScore = 0;
-  } else {
-    this.players[2].score += this.runningScore;
-    this.playerTurnBoolean = true;
-    this.winner();
-    this.runningScore = 0;
-  }
+  // if (this.playerTurnBoolean === true) {
+  //   this.players[1].score += this.runningScore;
+  //   this.playerTurnBoolean = false;
+  //   // this.winner();
+  //   this.runningScore = 0;
+  // } else {
+  //   this.players[2].score += this.runningScore;
+  //   this.playerTurnBoolean = true;
+  //   // this.winner();
+  //   this.runningScore = 0;
+  // }
 };
 
 // Game.prototype.endTurn = function() {
